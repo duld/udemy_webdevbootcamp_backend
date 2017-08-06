@@ -27,20 +27,23 @@ app.get('/', function(req, res){
     res.send("Hi there, wlecome to my assignment!");
 });
 
+
+var animalSounds = {
+    pig : 'Oink!',
+    cow : 'Moo!',
+    dog : "Woof Woof!",
+    cat : "&ltIntense glaring&gt"
+};
 // animal noises //
-// pig //
-app.get('/speak/pig', function(req, res){
-    res.send("<h1>Oink!</h1>");
-});
-
-// cow //
-app.get('/speak/cow', function(req, res){
-    res.send("<h1>Moo</h1>!");
-});
-
-// dog //
-app.get('/speak/dog', function(req, res){
-    res.send("<h1>Woof Woof!</h1>");
+// inspired by colt's solution.
+app.get('/speak/:animal', function(req, res){
+    var animal = req.params.animal.toLowerCase();
+    
+    if (animal in animalSounds){
+        res.send("<h1>" + animalSounds[animal] + "</h1>");
+    } else {
+        res.send("Sorry! Never heard of that animal before!");
+    }
 });
 
 // repeat strings // 
