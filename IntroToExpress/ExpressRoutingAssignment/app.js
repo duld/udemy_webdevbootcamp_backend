@@ -29,17 +29,17 @@ app.get('/', function(req, res){
 
 // animal noises //
 // pig //
-app.get('/pig', function(req, res){
+app.get('/speak/pig', function(req, res){
     res.send("<h1>Oink!</h1>");
 });
 
 // cow //
-app.get('/cow', function(req, res){
+app.get('/speak/cow', function(req, res){
     res.send("<h1>Moo</h1>!");
 });
 
 // dog //
-app.get('/dog', function(req, res){
+app.get('/speak/dog', function(req, res){
     res.send("<h1>Woof Woof!</h1>");
 });
 
