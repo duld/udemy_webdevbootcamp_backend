@@ -1,0 +1,48 @@
+<style>
+    h2 {
+        margin-bottom: 0;
+    }
+    li {
+        font-size: 18px;
+        list-style-type: none;
+    }
+    li:nth-of-type(odd){
+        background: white;
+    }
+    .container {
+        background: #a1a1a1;
+        width : 400px;
+        text-align: center;
+    }
+    .posts {
+        width: 200px;
+        margin: 0 auto;
+        border: 1px solid white;
+    }
+    
+    .posts li {
+        text-align: left;
+    }
+</style>
+
+<h1>The Posts Page</h1>
+
+<%= posts %>
+
+<div class='container'>
+    
+    <h2>For Loop</h2>
+    <div class='posts'>
+        <% for (var i=0; i < posts.length; i++){ %>
+            <li><%= posts[i].title %> - <strong><%= posts[i].author %></strong></li>
+        
+        <% } %>
+    </div>
+
+    <h2>forEach</h2>
+    <div class='posts'>
+        <% posts.forEach(function(post){ %>
+            <li><%= post.title %> - <strong><%= post.author %></strong></li>
+        <% }) %>
+    </div>
+</div>
