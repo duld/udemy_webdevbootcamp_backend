@@ -1,32 +1,6 @@
-<style>
-    h2 {
-        margin-bottom: 0;
-    }
-    li {
-        font-size: 18px;
-        list-style-type: none;
-    }
-    li:nth-of-type(odd){
-        background: white;
-    }
-    .container {
-        background: #a1a1a1;
-        width : 400px;
-        text-align: center;
-    }
-    .posts {
-        width: 200px;
-        margin: 0 auto;
-        border: 1px solid white;
-    }
-    
-    .posts li {
-        text-align: left;
-    }
-</style>
+<% include partials/header %>
 
 <h1>The Posts Page</h1>
-
 <%= posts %>
 
 <div class='container'>
@@ -46,3 +20,4 @@
         <% }) %>
     </div>
 </div>
+<% include partials/footer %>
