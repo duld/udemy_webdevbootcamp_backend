@@ -1,0 +1,36 @@
+body {
+    background: yellow;
+}
+
+h1 {
+    color: orange;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+li {
+    font-size: 18px;
+    list-style-type: none;
+}
+
+li:nth-of-type(odd){
+    background: white;
+}
+
+.container {
+    background: #a1a1a1;
+    width : 400px;
+    text-align: center;
+}
+
+.posts {
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+.posts li {
+    text-align: left;
+}
